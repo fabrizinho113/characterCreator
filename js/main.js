@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Funcion del menu 
 
     function menu(){
-        let opcion = prompt(`Menu: \n A- Crear un personaje \n B- Ver personajes creados \n C- Modificar personaje \n D- Borrar personaje \n E- Exit`);
+        let opcion = prompt(`Menu: \n A- Crear un personaje \n B- Ver personajes creados \n C- Modificar nombre del personaje \n D- Borrar personaje \n E- Exit`);
 
         return opcion.toLowerCase();
     }
@@ -122,15 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 if(opcion == 1){
                     this.personajes[contador].nombre = prompt("Ingrese el nuevo nombre del personaje: ");
                     alert("El nombre del personaje ha sido cambiado con exito.");
-                    return;
-                } else if (opcion == 2){
-                    this.personaje[contador].clase = parseInt(prompt("Ingrese la nueva clase del personaje: \n 1- Warrior \n 2- Priest \n 3- Archer"));
-
-                    if(this.personajes[contador].clase == 1){return "Warrior";}
-                    if(this.personajes[contador].clase == 2){return "Priest";}
-                    if(this.personajes[contador].clase == 3){return "Archer";}
-
-                    alert("La clase del personaje ha sido cambiada con exito.");
                     return;
                 }
             }while(opcion = parseInt(prompt("La opcion que ingreso no es valida, intente nuevamente. \n Cual propiedad desea cambiar? \n 1- Nombre \n 2- Clase ")));
